@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Legal Document Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { background: #007bff; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        #output { margin-top: 20px; white-space: pre-wrap; background: #f8f9fa; padding: 15px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+    <h1>AI Legal Document Generator</h1>
+    <div class="form-group">
+        <label for="docType">Document Type:</label>
+        <select id="docType">
+            <option value="NDA">Non-Disclosure Agreement (NDA)</option>
+            <option value="Freelance Contract">Freelance Contract</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="partyNames">Parties Involved:</label>
+        <input type="text" id="partyNames" placeholder="e.g., Company A and John Doe">
+    </div>
+
+    <div class="form-group">
+        <label for="keyTerms">Key Conditions/Terms:</label>
+        <textarea id="keyTerms" rows="4" placeholder="e.g., Duration of 1 year, $500 monthly payment"></textarea>
+    </div>
+
+    <button onclick="generateDocument()">Generate with AI</button>
+
+    <h3>Generated Document:</h3>
+    <div id="output">Your document will appear here...</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
